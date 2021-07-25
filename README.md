@@ -25,3 +25,8 @@ See [Vuetify Landing Page Template](https://landingpagecalangoweb.web.app/).
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Installed Vue Router
+Installed with History - note this requires proper server setup in production
+
