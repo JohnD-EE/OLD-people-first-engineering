@@ -1,21 +1,20 @@
 <template>
   <section class="pb-8" id="contact">
-    <v-container fluid>
+    <v-container fluid class="pt-15 pb-15">
       <v-row align="center" justify="center">
         <v-col cols="10">
           <v-row justify="center">
             <v-col cols="12" sm="5">
-              <h1 class="font-weight-light display-1">Contate-nos</h1>
+              <h1 class="font-weight-light display-1">Contact</h1>
               <h3 class="font-weight-light mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-                explicabo commodi quisquam asperiores dolore ad enim provident
-                veniam perferendis voluptate, perspiciatis.
+                Use this form if you would like to discover we can assist
+                your organisation in developing a People First Engineering ecosystem.
               </h3>
               <h3 class="font-weight-light mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
+                Please leave a detailed message or reach out via social media.
               </h3>
               <h3 class="font-weight-light mt-3">
-                Telefone: +xx (xx) xxxxx-xxxx
+                Telephone: +44 (0)7753 409 901
               </h3>
               <h3 class="font-weight-light">
                 Email: email@email.com
@@ -26,22 +25,25 @@
                 <v-text-field
                     v-model="name"
                     :rules="nameRules"
-                    label="Nome"
+                    label="Name"
                     required
+                    class="mt-5"
                 ></v-text-field>
 
                 <v-text-field
                     v-model="email"
                     :rules="emailRules"
-                    label="E-mail"
+                    label="Email"
                     required
+                    class="mt-5"
                 ></v-text-field>
 
                 <v-textarea
                     v-model="textArea"
                     :rules="textAreaRules"
-                    label="Mensagem"
+                    label="Message"
                     required
+                    class="mt-5"
                 />
 
                 <v-btn
@@ -49,11 +51,11 @@
                     color="primary"
                     :dark="valid"
                     rounded
-                    block
-                    class="mt-3"
+                    
+                    class="mt-5"
                     @click="submit"
                 >
-                  Enviar
+                  Submit
                 </v-btn>
               </v-form>
             </v-col>
@@ -61,9 +63,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <div class="svg-border-waves text-white">
-      <v-img src="~@/assets/img/borderWavesBlue.svg"/>
-    </div>
+
     <v-snackbar
         v-model="snackbar.enabled"
         timeout="3000"
@@ -88,7 +88,7 @@
 
 <style scoped>
 #contact {
-  background-color: #f4f7f5;
+  background-color: #FFF;
 }
 
 .svg-border-waves .v-image {
@@ -111,18 +111,18 @@ export default {
     valid: true,
     name: "",
     nameRules: [
-      (v) => !!v || "O campo nome é obrigatório",
-      (v) => (v && v.length >= 6) || "O nome precisa ter mais de 6 caracteres",
+      (v) => !!v || "This field is mandatory",
+      (v) => (v && v.length >= 6) || "Name must be longer than 6 characters",
     ],
     email: "",
     emailRules: [
-      (v) => !!v || "O campo email é obrigatório",
-      (v) => /.+@.+\..+/.test(v) || "O E-mail precisa ser válido",
+      (v) => !!v || "This field is mandatory",
+      (v) => /.+@.+\..+/.test(v) || "Email must be valid",
     ],
     textArea: "",
     textAreaRules: [
-      (v) => !!v || "O campo de texto é obrigatório",
-      (v) => (v && v.length >= 10) || "Mínimo de 10 caracteres",
+      (v) => !!v || "This field is mandatory",
+      (v) => (v && v.length >= 10) || "Mínimum of 10 characters",
     ],
     lazy: false,
     snackbar: {

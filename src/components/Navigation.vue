@@ -5,7 +5,7 @@
       app
       temporary
       dark
-      src="@/assets/img/bgDrawer.jpg"
+      src=""
     >
       <v-list>
         <v-list-item>
@@ -13,8 +13,8 @@
             <img src="@/assets/img/logo.png" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">Calango</v-list-item-title>
-            <v-list-item-subtitle>WEB</v-list-item-subtitle>
+            <v-list-item-title class="title">People First</v-list-item-title>
+            <v-list-item-subtitle>ENGINEERING</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -62,16 +62,10 @@
           <span class="mr-2">Home</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#features')">
-          <span class="mr-2">Sobre</span>
-        </v-btn>
-        <v-btn text @click="$vuetify.goTo('#download')">
-          <span class="mr-2">Download</span>
-        </v-btn>
-        <v-btn text @click="$vuetify.goTo('#pricing')">
-          <span class="mr-2">Preços</span>
+          <span class="mr-2">Contents</span>
         </v-btn>
         <v-btn rounded outlined text @click="$vuetify.goTo('#contact')">
-          <span class="mr-2">Contate-nos</span>
+          <span class="mr-2">Contact</span>
         </v-btn>
       </div>
     </v-app-bar>
@@ -96,9 +90,7 @@ export default {
     isXs: false,
     items: [
       ["mdi-home-outline", "Home", "#hero"],
-      ["mdi-information-outline", "Sobre", "#features"],
-      ["mdi-download-box-outline", "Download", "#download"],
-      ["mdi-currency-usd", "Preços", "#pricing"],
+      ["mdi-information-outline", "Contents", "#features"],
       ["mdi-email-outline", "Contatos", "#contact"],
     ],
   }),

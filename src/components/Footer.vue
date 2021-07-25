@@ -15,14 +15,14 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-        Mauris cursus commodo interdum.
+        Bringing modern working practices to Software Engineers, QA Engineers, DevOps Engineers and the technical ecosystem. <br/>
+        Thinking about the needs of people to design optimal Software Engineering environments. 
       </v-card-text>
 
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Calango WEB</strong>
+        {{ new Date().getFullYear() }} — <strong>PEOPLE FIRST ENGINEERING</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -39,10 +39,6 @@ export default {
   data: () => ({
     icons: [
       {
-        text: "mdi-facebook",
-        link: "",
-      },
-      {
         text: "mdi-twitter",
         link: "",
       },
@@ -52,7 +48,7 @@ export default {
       },
       {
         text: "mdi-instagram",
-        link: "https://instagram.com/joabson_arley/",
+        link: "",
       },
     ],
   }),

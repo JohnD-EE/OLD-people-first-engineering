@@ -5,11 +5,11 @@
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" xl="8">
-              <h1 class="display-2 font-weight-bold mb-4">Vuetify.js</h1>
+              <h1 class="display-2 font-weight-bold mb-4 font-italic">PEOPLE FIRST ENGINEERING</h1>
               <h1 class="font-weight-light">
-                Lorem ipsum dolor sit amet consectetur <br />
-                adipisicing elit. Maiores porro voluptatibus <br />
-                delectus nam optio harum!
+                Standards for building software where<br />
+                principles, processes and methodologies are<br />
+                designed for optimal human experiences
               </h1>
               <v-btn
                 rounded
@@ -19,10 +19,10 @@
                 @click="$vuetify.goTo('#features')"
                 class="mt-5"
               >
-                Saiba mais
+                Learn more
                 <v-icon class="ml-2">mdi-arrow-down</v-icon>
               </v-btn>
-              <div class="video d-flex align-center py-4">
+              <div class="video d-flex align-center py-4 mt-10">
                 <a @click.stop="dialog = true" class="playBut">
                   <svg
                     version="1.1"
@@ -62,18 +62,16 @@
                     />
                   </svg>
                 </a>
-                <p class="subheading ml-2 mb-0">Assista o vídeo</p>
+                <p class="subheading ml-2 mb-0 font-weight-bold">Play Vídeo</p>
               </div>
             </v-col>
             <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down"> </v-col>
           </v-row>
         </v-col>
       </v-row>
-      <div class="svg-border-waves text-white">
-        <v-img src="@/assets/img/borderWaves.svg" />
-      </div>
+      
     </v-parallax>
-    <v-container fluid id="features" class="mt-2">
+    <v-container fluid id="features" class="mt-15">
       <v-row align="center" justify="center">
         <v-col cols="10">
           <v-row align="center" justify="space-around">
@@ -85,17 +83,17 @@
             </v-col> -->
             <v-col
               cols="12"
-              sm="4"
+              sm="3"
               class="text-center"
               v-for="(feature, i) in features"
               :key="i"
             >
               <v-hover v-slot:default="{ hover }">
                 <v-card
-                  class="card"
-                  shaped
+                  class="card pt-5"
+                  dark
+                  color="primary"
                   :elevation="hover ? 10 : 4"
-                  :class="{ up: hover }"
                 >
                   <v-img
                     :src="feature.img"
@@ -123,9 +121,7 @@
         ></youtube>
       </v-card>
     </v-dialog>
-    <div class="svg-border-waves">
-      <img src="~@/assets/img/wave2.svg" />
-    </div>
+
   </section>
 </template>
 
@@ -134,22 +130,27 @@ export default {
   data() {
     return {
       dialog: false,
-      videoId: "i8IvvHJssWE",
+      videoId: "qm83CvnpzRo",
       features: [
         {
-          img: require("@/assets/img/icon2.png"),
-          title: "Design Limpo",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          img: require("@/assets/img/logo.png"),
+          title: "People",
+          text: "Are your Engineers working in a environment where they can thrive?",
         },
         {
-          img: require("@/assets/img/icon1.png"),
-          title: "Dados Seguros",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          img: require("@/assets/img/logo.png"),
+          title: "Principles",
+          text: "Do you have a coherent philosophical grounding that guides and governs how things are done?",
         },
         {
-          img: require("@/assets/img/icon3.png"),
-          title: "Código Aberto",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          img: require("@/assets/img/logo.png"),
+          title: "Processes",
+          text: "Do your processes support and enable your people or are they a soul sapping chore?",
+        },
+        {
+          img: require("@/assets/img/logo.png"),
+          title: "Tools",
+          text: "Do you have a kitbag of appropriate tools to reach for during your most difficult situations?",
         },
       ],
     };
@@ -246,25 +247,8 @@ export default {
   transition: 0.2s;
 }
 
-.svg-border-waves .v-image {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3rem;
-  width: 100%;
-  overflow: hidden;
-}
-
 #hero {
   z-index: 0;
-}
-.svg-border-waves img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin-bottom: -2px;
-  z-index: -1;
 }
 
 .card {
@@ -284,11 +268,6 @@ export default {
 
 .zoom-efect {
   transform: scale(1.1);
-}
-
-.up {
-  transform: translateY(-20px);
-  transition: 0.5s ease-out;
 }
 </style>
 

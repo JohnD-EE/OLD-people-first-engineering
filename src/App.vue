@@ -29,10 +29,12 @@
 
 <style scoped>
 .v-main {
+  /*
   background-image: url("~@/assets/img/bgMain.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  */
 }
 </style>
 
@@ -41,8 +43,6 @@ import navigation from "./components/Navigation";
 import foote from "./components/Footer";
 import home from "./components/HomeSection";
 import about from "./components/AboutSection";
-import download from "./components/DownloadSection";
-import pricing from "./components/PricingSection";
 import contact from "./components/ContactSection";
 
 export default {
@@ -52,10 +52,8 @@ export default {
     navigation,
     foote,
     home,
-    about,
-    download,
-    pricing,
     contact,
+    about
   },
 
   data: () => ({
