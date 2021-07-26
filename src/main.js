@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import vuetify from './plugins/vuetify';
+import vuetify from './plugins/vuetify'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import router from './router'
 // import firebase from 'firebase/app'
